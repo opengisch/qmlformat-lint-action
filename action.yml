@@ -1,0 +1,18 @@
+name: 'QML format lint'
+description: 'Runs qmlformat on your code and succeeds if all files are properly formatted. Prints out a nice diff if not.'
+branding:
+  icon: 'check-square'
+  color: 'green'
+inputs:
+  file-filter:
+    description: 'File filter'
+    required: false
+    default: '*.qml'
+outputs:
+  time: # id of output
+    description: 'The time we greeted you'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.file-filter }}
