@@ -15,4 +15,17 @@ None
 
 ## Example usage
 
-uses: opengisch/qmlformat-lint@v1
+```yaml
+name: QML format lint
+
+on:
+  [push, pull_request]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - uses: opengisch/qmlformat-lint-action@v1
+```
