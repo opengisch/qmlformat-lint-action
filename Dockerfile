@@ -1,4 +1,4 @@
-FROM forderud/qtwasm:qt-5.15
+FROM forderud/qtwasm/tree/qt6
 
 RUN apt install colordiff
 
